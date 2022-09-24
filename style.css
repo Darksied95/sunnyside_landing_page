@@ -58,14 +58,17 @@ header {
 .toggle {
   margin-left: auto;
 }
+
 .header-nav {
-  display: none;
   background-color: white;
+  opacity: 0;
   position: absolute;
   top: 80px;
   left: 0;
   right: 0;
   padding-top: 1em;
+  z-index: 99;
+  transition: opacity 200ms ease-in;
 }
 .header-nav::after {
   content: "";
@@ -113,8 +116,49 @@ header {
 .arrow-down {
   margin-inline: auto;
   margin-bottom: 10em;
+  -webkit-animation-duration: 1s;
+  animation-duration: 2s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
 }
 
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
 .responsive-image {
   height: 100vw;
   background-size: contain;
@@ -154,8 +198,7 @@ header {
   opacity: 0.3;
 }
 .box {
-  background-size: 100%;
-  border: 1px transparent solid;
+  background-size: cover;
   padding: 1em;
   background-repeat: no-repeat;
 }
@@ -195,7 +238,7 @@ header {
 }
 .testimonials > h1 {
   color: var(--clr-grayish-blue);
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-align: center;
   letter-spacing: 5px;
 }
