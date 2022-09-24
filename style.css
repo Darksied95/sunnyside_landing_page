@@ -112,7 +112,7 @@ header {
 }
 .arrow-down {
   margin-inline: auto;
-  margin-bottom: 7em;
+  margin-bottom: 10em;
 }
 
 .responsive-image {
@@ -153,6 +153,28 @@ header {
   background-color: var(--clr-yellow);
   opacity: 0.3;
 }
+.box {
+  background-size: 100%;
+  border: 1px transparent solid;
+  padding: 1em;
+  background-repeat: no-repeat;
+}
+.box-details {
+  margin-top: 20em;
+}
+.box-details h2 {
+  font-family: var(--ff-fraunces);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+.box-details p {
+  font-family: var(--ff-barlow);
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 2;
+}
 .transform {
   background-image: url(/assets/mobile/image-transform.jpg);
 }
@@ -167,10 +189,80 @@ header {
 .photography {
   background-image: url(/assets/mobile/image-photography.jpg);
 }
+
+.testimonials {
+  padding: 2em;
+}
+.testimonials > h1 {
+  color: var(--clr-grayish-blue);
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 5px;
+}
+.sub-testimonial img {
+  border-radius: 50%;
+  width: 70px;
+  margin: auto;
+  margin-block: 3em;
+}
+.sub-testimonial p {
+  font-size: 1.1rem;
+  font-family: var(--ff-barlow);
+  line-height: 1.5;
+  text-align: center;
+  color: var(--clr-dark-blue);
+}
+.sub-testimonial > div h2 {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0.6em;
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+.sub-testimonial > div p {
+  color: var(--clr-grayish-blue);
+  text-align: center;
+  font-size: 0.8rem;
+}
+
 .image-gallery {
   height: 400px;
+  margin-top: 3em;
   background-image: url(/assets/mobile/image-gallery-milkbottles.jpg),
     url(/assets/mobile/image-gallery-orange.jpg),
     url(/assets/mobile/image-gallery-cone.jpg),
     url(/assets/mobile/image-gallery-sugar-cubes.jpg);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: left top, right top, left bottom, right bottom;
+  background-size: 50% 200px, 50% 200px, 50% 200px, 50% 200px;
+}
+footer {
+  background-color: hsl(168, 38%, 53%);
+  padding: 1px;
+}
+footer h1 {
+  color: var(--clr-dark-desaturated-cyan);
+  text-align: center;
+  margin-top: 1.4em;
+  margin-bottom: 1em;
+}
+footer nav > ul,
+footer div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  width: 90%;
+  font-family: var(--ff-barlow);
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--clr-dark-desaturated-cyan);
+  opacity: 0.8;
+}
+footer div {
+  width: 40%;
+  margin: auto;
+  margin-block: 3em;
 }
