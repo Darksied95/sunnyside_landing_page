@@ -330,9 +330,9 @@ footer div {
   }
   .stand-out {
     background-image: url(/assets/desktop/image-stand-out.jpg);
-    background-size: 80% !important;
+    background-size: contain !important;
+    background-color: var(--clr-soft-red);
     background-position: 50%;
-    background-repeat: repeat-x;
   }
   .graphic-design {
     background-image: url(/assets/desktop/image-graphic-design.jpg);
@@ -413,10 +413,11 @@ footer div {
     height: 100%;
   }
   .responsive-image {
-    background-size: cover;
+    background-size: contain;
   }
   .order-two {
     order: 2;
+    background-color: var(--clr-yellow);
   }
   .order-one {
     order: 1;
